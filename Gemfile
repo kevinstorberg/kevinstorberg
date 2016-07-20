@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.3.6'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -42,5 +43,4 @@ end
 group :production do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'pg'
-  gem 'rails_12factor'
 end
