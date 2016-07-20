@@ -29,7 +29,7 @@ gem 'masonry-rails'
 
 gem "mini_magick"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.0'
+gem 'rails', '4.2.5'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
