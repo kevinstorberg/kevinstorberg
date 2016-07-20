@@ -1,19 +1,31 @@
 #about-bubble {
-  background-color: red;
+  background-color: rgba(92, 91, 89, .5);
   left: calc(50% - 100px);
   top: calc(50% - 180px);
 }
 
+#about-bubble:hover {
+  opacity: 1;
+}
+
 #blog-bubble {
-  background-color: red;
+  background-color: rgba(99, 87, 123, .5);
   left: calc(50% - 20px);
   top: calc(50% - 100px);
 }
 
+#blog-bubble:hover {
+  opacity: 1;
+}
+
 #contact-bubble {
-  background-color: blue;
+  background-color: rgba(98, 119, 70, .5);
   left: calc(50% - 100px);
   top: calc(50% - 20px);
+}
+
+#contact-bubble:hover {
+  opacity: 1;
 }
 
 .bubble-link {
@@ -26,9 +38,13 @@
 }
 
 #projects-bubble {
-  background-color: blue;
+  background-color: rgba(9, 61, 92, .5);
   left: calc(50% - 180px);
   top: calc(50% - 100px);
+}
+
+#projects-bubble:hover {
+  opacity: 1;
 }
 
 #welcome-page {
