@@ -1,230 +1,36 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.venn-container {
-  margin-top: 100px;
-  padding: 25px 25px 25px 200px;
-}
-.venncircle {
-  padding: 18px;
-  width: 180px;
-  height: 180px;
-  -moz-border-radius: 200px;
-  -webkit-border-radius: 200px;
-  border-radius: 50%;
-  position: absolute;
-  -webkit-transition: color 0.5s linear, background-color 0.5s linear;
-  -moz-transition: color 0.5s linear, background-color 0.5s linear;
-  -o-transition: color 0.5s linear, background-color 0.5s linear;
-  transition: color 0.5s linear, background-color 0.5s linear;
-}
-.venncircle > a {
-  font-size: 19px;
-  font-weight: bold;
-  letter-spacing: .004em;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.venncirctop {
-  text-align: center;
-  align-content: center;
-  padding: 18px;
-  width: 180px;
-  height: 180px;
-  -moz-border-radius: 200px;
-  -webkit-border-radius: 200px;
-  border-radius: 50%;
-  position: absolute;
-  -webkit-transition: color 0.5s linear, background-color 0.5s linear;
-  -moz-transition: color 0.5s linear, background-color 0.5s linear;
-  -o-transition: color 0.5s linear, background-color 0.5s linear;
-  transition: color 0.5s linear, background-color 0.5s linear;
-  margin-bottom: -130px;
-  margin-left: -70px;
-  background-color: #5c5b59;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  background-color: rgba(92, 91, 89, 0.5);
-  z-index: 1;
-  position: relative;
-}
-.venncirctop > a {
-  font-size: 19px;
-  font-weight: bold;
-  letter-spacing: .004em;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.venncirctop:hover {
-  z-index: 5;
-  background-color: #6A6561;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  background-color: rgba(106, 101, 97, 0.9);
-}
-.venncirclft {
-  padding: 18px;
-  width: 180px;
-  height: 180px;
-  -moz-border-radius: 200px;
-  -webkit-border-radius: 200px;
-  border-radius: 50%;
-  position: absolute;
-  -webkit-transition: color 0.5s linear, background-color 0.5s linear;
-  -moz-transition: color 0.5s linear, background-color 0.5s linear;
-  -o-transition: color 0.5s linear, background-color 0.5s linear;
-  transition: color 0.5s linear, background-color 0.5s linear;
-  margin-left: -157px;
-  background-color: #093d5c;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  background-color: rgba(9, 61, 92, 0.5);
-  z-index: 2;
-}
-.venncirclft > a {
-  font-size: 19px;
-  font-weight: bold;
-  letter-spacing: .004em;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.venncirclft:hover {
-  z-index: 5;
-  background-color: #37688C;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  background-color: rgba(55, 104, 140, 0.9);
-}
-.venncircrt {
-  padding: 18px;
-  width: 180px;
-  height: 180px;
-  -moz-border-radius: 200px;
-  -webkit-border-radius: 200px;
-  border-radius: 50%;
-  position: absolute;
-  -webkit-transition: color 0.5s linear, background-color 0.5s linear;
-  -moz-transition: color 0.5s linear, background-color 0.5s linear;
-  -o-transition: color 0.5s linear, background-color 0.5s linear;
-  transition: color 0.5s linear, background-color 0.5s linear;
-  margin-left: 17px;
-  background-color: #5e577b;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  background-color: rgba(94, 87, 123, 0.5);
-  z-index: 3;
-  text-align: right;
-}
-.venncircrt > a {
-  font-size: 19px;
-  font-weight: bold;
-  letter-spacing: .004em;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.venncircrt:hover {
-  z-index: 5;
-  background-color: #625F75;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  background-color: rgba(98, 95, 117, 0.9);
-}
-.venncircbtm {
-  padding: 18px;
-  width: 180px;
-  height: 180px;
-  -moz-border-radius: 200px;
-  -webkit-border-radius: 200px;
-  border-radius: 50%;
-  position: absolute;
-  -webkit-transition: color 0.5s linear, background-color 0.5s linear;
-  -moz-transition: color 0.5s linear, background-color 0.5s linear;
-  -o-transition: color 0.5s linear, background-color 0.5s linear;
-  transition: color 0.5s linear, background-color 0.5s linear;
-  top: 90px;
-  margin-right: 100px;
-  margin-left: -70px;
-  text-align: center;
-  background-color: #627746;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  background-color: rgba(98, 119, 70, 0.5);
-  z-index: 1;
-  position: relative;
-}
-.venncircbtm > a {
-  font-size: 19px;
-  font-weight: bold;
-  letter-spacing: .004em;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.venncircbtm:hover {
-  z-index: 5;
-  background-color: #3a4e20;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  background-color: rgba(58, 78, 32, 0.9);
-}
-.venntxttop {
-  text-align: center;
-  display: inline-block;
-  margin: 0 auto;
-  position: relative;
-  top: 10px;
-}
-.venntxttop:hover {
-  color: #FFFFFF;
-  text-decoration:none;
-}
-.venntxtrt {
-  margin: 0 0 0 87px;
-  display: inline-block;
-  position: relative;
-  top: 63px;
-  z-index: 5;
-}
-.venntxtrt:hover {
-  color: #FFFFFF;
-  text-decoration:none;
+#about-bubble {
+  background-color: red;
+  left: calc(50% - 100px);
+  top: calc(50% - 180px);
 }
 
-.venntxtlft {
-  width: 70%;
-  display: inline-block;
-  position: relative;
-  text-align: left;
-  top: 63px;
-  z-index: 5;
+#blog-bubble {
+  background-color: red;
+  left: calc(50% - 20px);
+  top: calc(50% - 100px);
 }
-.venntxtlft:hover {
-  color: #FFFFFF;
-  text-decoration:none;
+
+#contact-bubble {
+  background-color: blue;
+  left: calc(50% - 100px);
+  top: calc(50% - 20px);
 }
-.venntxtbtm {
+
+.bubble-link {
+  border-radius: 100%;
+  min-height: 200px;
+  min-width: 200px;
+  opacity: .6;
+  position: absolute;
   text-align: center;
-  display: inline-block;
-  width: 70%;
-  position: relative;
-  top: 103px;
 }
-.venntxtbtm:hover {
-  color: #FFFFFF;
-  text-decoration:none;
+
+#projects-bubble {
+  background-color: blue;
+  left: calc(50% - 180px);
+  top: calc(50% - 100px);
 }
 
 #welcome-page {
-}
 
-.row-fluid {
-  align-items: center;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  width: 100%;
 }
