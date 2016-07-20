@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .venn-container {
+  margin-top: 100px;
   padding: 25px 25px 25px 200px;
 }
 .venncircle {
@@ -192,6 +193,7 @@
   width: 70%;
   display: inline-block;
   position: relative;
+  text-align: left;
   top: 63px;
   z-index: 5;
 }
@@ -212,15 +214,17 @@
 }
 
 #welcome-page {
-  // align-items: center;
-  // display: -ms-flexbox;
-  // display: -webkit-flex;
-  // display: flex;
-  // height: 100%;
-  // justify-content: center;
-  // -ms-flex-align: center;
-  // text-align: center;
-  // -webkit-align-items: center;
-  // -webkit-box-align: center;
-  // width: 100%;
+}
+
+.row-fluid {
+  align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  width: 100%;
 }
