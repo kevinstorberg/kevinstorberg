@@ -5,6 +5,9 @@ class AdminsController < ApplicationController
 
   def create
     @admin = Admin.new(admin_params)
+    if @admin.save
+      session[:admin_id] = @admin.id
+    end
   end
 
   private

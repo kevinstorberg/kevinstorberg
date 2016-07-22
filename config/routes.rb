@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :sessions, only: [:new, :create, :destroy]
+    get 'sessions/new'
+    get 'sessions/create'
+    get 'sessions/destroy'
 
   resources :admins
 
