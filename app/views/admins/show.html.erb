@@ -1,0 +1,6 @@
+<h1>Admin Panel</h1>
+<div>
+  <% if session.id != nil %>
+    <%= link_to "Log Out", logout_path %>
+  <% end %>
+</div>

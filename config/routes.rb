@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
-    get 'sessions/new'
-    get 'sessions/create'
-    get 'sessions/destroy'
+    get 'signup', to: 'admins#new', as: 'signup'
+    get 'login', to: 'sessions#new', as: 'login'
+    get 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :admins
 

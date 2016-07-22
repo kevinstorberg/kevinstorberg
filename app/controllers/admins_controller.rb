@@ -1,4 +1,8 @@
 class AdminsController < ApplicationController
+
+  def show
+  end
+  
   def new
     @admin = Admin.new
   end
@@ -11,8 +15,7 @@ class AdminsController < ApplicationController
   end
 
   private
-
     def admin_params
-      params.require(:admin).permit(:password)
+      params.require(:admin).permit(:name, :password)
     end
 end
