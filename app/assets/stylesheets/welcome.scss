@@ -1,52 +1,61 @@
+// Main =======================================================================
 #about-bubble {
-  background-color: rgba(92, 91, 89, .5);
-  left: calc(50% - 100px);
-  top: calc(50% - 180px);
-}
-
-#about-bubble:hover {
-  opacity: 1;
+  background-color: rgb(92, 91, 89);
+  left: calc(50% - 125px);
+  top: calc(25% - 125px);
 }
 
 #blog-bubble {
-  background-color: rgba(99, 87, 123, .5);
-  left: calc(50% - 20px);
-  top: calc(50% - 100px);
+  background-color: rgb(99, 87, 123);
+  left: calc(50%);
+  top: calc(25%);
 }
 
-#blog-bubble:hover {
+.bubble-div {
+  border-radius: 100%;
+  min-height: 250px;
+  min-width: 250px;
+  opacity: .7;
+  position: absolute;
+  text-align: center;
+
+}
+
+.bubble-div:hover {
   opacity: 1;
-}
-
-#contact-bubble {
-  background-color: rgba(98, 119, 70, .5);
-  left: calc(50% - 100px);
-  top: calc(50% - 20px);
-}
-
-#contact-bubble:hover {
-  opacity: 1;
+  z-index: 5;
 }
 
 .bubble-link {
   border-radius: 100%;
-  min-height: 200px;
-  min-width: 200px;
-  opacity: .6;
-  position: absolute;
+  color: white;
+  display: inline-block;
+  font-family: verdana;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 250px;
+  text-decoration: none;
+  width: 250px;
+
+  align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  -ms-flex-align: center;
   text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+}
+
+#contact-bubble {
+  background-color: rgb(98, 119, 70);
+  left: calc(50% - 125px);
+  top: calc(25% + 125px);
 }
 
 #projects-bubble {
-  background-color: rgba(9, 61, 92, .5);
-  left: calc(50% - 180px);
-  top: calc(50% - 100px);
-}
-
-#projects-bubble:hover {
-  opacity: 1;
-}
-
-#welcome-page {
-
+  background-color: rgb(9, 61, 92);
+  left: calc(50% - 250px);
+  top: calc(25%);
 }
