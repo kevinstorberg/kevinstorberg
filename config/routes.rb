@@ -1,15 +1,30 @@
 Rails.application.routes.draw do
 
-  resources :admins
+    # Admin ===================================================================
+    resources :admins
 
-  resources :pages
+
+    # Blog ===================================================================
+    get 'blog', to: 'blogs#index', as: 'blog'
+
+
+    # Pages ===================================================================
     get 'about', to: 'pages#about', as: 'about'
+    get 'contact', to: 'pages#contact', as: 'contact'
 
-  resources :sessions, only: [:new, :create, :destroy]
+
+    # Projects ===================================================================
+    get 'projects', to: 'projects#index', as: 'projects'
+
+
+    # Sessions ===================================================================
+    resources :sessions, only: [:new, :create, :destroy]
     get 'signup', to: 'admins#new', as: 'signup'
     get 'login', to: 'sessions#new', as: 'login'
     get 'logout', to: 'sessions#destroy', as: 'logout'
 
+
+    # Welcome ===================================================================
     get 'welcome/index'
     root 'welcome#index'
 
