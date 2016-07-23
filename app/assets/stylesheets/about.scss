@@ -1,0 +1,27 @@
+.about-image {
+  float: left;
+  height: 400px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  width: 400px;
+}
+
+.about-text {
+  padding: 0px 30px 30px 0px;
+}
+
+.about-page-break {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+  .about-image {
+    float: none;
+    margin: auto;
+  }
+
+  .about-page-break {
+    display: block;
+  }
+}
