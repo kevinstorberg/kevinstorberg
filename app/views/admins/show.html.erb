@@ -1,6 +1,18 @@
-<h1>Admin Panel</h1>
-<div>
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-6">
+      <h1>Projects</h1></br>
+    </div>
+    <div class="col-sm-6">
+      <h1>Blogs</h1></br>
+    </div>
+
+  </div>
+</div>
+
+<footer style="background-color: silver; color: #777">
   <% if session.id != nil %>
     <%= link_to "Log Out", logout_path %>
   <% end %>
-</div>
+</footer>
