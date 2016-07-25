@@ -60,3 +60,22 @@
   left: calc(50% - 250px);
   top: calc(25%);
 }
+
+// // 450px Width ==============================================================
+@media (max-width: 450px) {
+  #blog-bubble, #projects-bubble {
+    left: calc(50% - 125px);
+  }
+
+  #blog-bubble {
+    top: calc(25% + 325px);
+  }
+
+  #contact-bubble {
+    top: calc(25% + 550px);
+  }
+
+  #projects-bubble {
+    top: calc(25% + 100px);
+  }
+}
