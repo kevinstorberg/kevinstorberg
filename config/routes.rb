@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
 
     # Blog ===================================================================
-    get 'blog', to: 'blogs#index', as: 'blog'
+    resources :blogs
+    # get 'blog', to: 'blogs#index', as: 'blog'
 
 
     # Pages ===================================================================
@@ -14,7 +15,8 @@ Rails.application.routes.draw do
 
 
     # Projects ===================================================================
-    get 'projects', to: 'projects#index', as: 'projects'
+    resources :projects
+    # get 'projects', to: 'projects#index', as: 'projects'
 
 
     # Sessions ===================================================================

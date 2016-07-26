@@ -3,13 +3,27 @@
 
     <div class="col-sm-6">
       <h1>Projects</h1></br>
+      <%= form_for Project.new do |f| %>
+        <div class ="field">
+          <%= f.label :body, "Body" %>
+          <%= f.text_field :body %>
+        </div>
+        <div class="actions">
+          <%= f.submit%>
+        </div>
+      <% end %>
     </div>
+
     <div class="col-sm-6">
       <h1>Blogs</h1></br>
     </div>
 
   </div>
 </div>
+
+<br>
+<br>
+<br>
 
 <footer style="background-color: silver; color: #777">
   <% if session.id != nil %>
