@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'pictures/new'
+
+  get 'pictures/create'
+
+  get 'pictures/destroy'
+
     # Admin ===================================================================
     resources :admins
 
