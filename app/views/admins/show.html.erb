@@ -16,6 +16,15 @@
 
     <div class="col-sm-6">
       <h1>Blogs</h1></br>
+      <%= form_for Blog.new do |f| %>
+        <div class="field">
+          <%= f.label :body %>
+          <%= f.text_field :body %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
     </div>
 
   </div>

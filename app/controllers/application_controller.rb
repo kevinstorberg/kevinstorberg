@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
     end
 
     helper_method :current_admin
+
+    def kevin
+      Admin.first
+    end
+
+    helper_method :kevin
 end
