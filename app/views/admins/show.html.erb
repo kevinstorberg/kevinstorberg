@@ -25,11 +25,20 @@
 
     <div class="col-sm-6">
       <h1>Blogs</h1></br>
-      <%= form_for Blog.new do |f| %>
+      <%= form_for @blog do |f| %>
+        <div class="field">
+          <%= f.label :title, "Title" %>
+          <%= f.text_field :title %>
+        </div>
         <div class="field">
           <%= f.label :body, "Body" %>
           <%= f.text_field :body %>
         </div>
+        <%= f.fields_for :picture do |ff| %>
+        <div class="field">
+          <%= ff.file_field :image %>
+        </div>
+        <% end %>
         <div class="actions">
           <%= f.submit %>
         </div>

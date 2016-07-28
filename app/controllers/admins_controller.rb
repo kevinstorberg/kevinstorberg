@@ -3,7 +3,14 @@ class AdminsController < ApplicationController
   def show
     @project = Project.new
     @project.build_picture
+
+    @blog = Blog.new
+    @blog.build_picture
   end
+
+  def new
+    @admin = Admin.new
+  end 
 
   def create
     @admin = Admin.new(admin_params)

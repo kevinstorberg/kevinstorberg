@@ -12,8 +12,12 @@ class BlogsController < ApplicationController
   end
 
   def create
-    @blog = kevin.blogs.create(blog_params)
-    redirect_to blogs_path
+    @blog = Blog.new(blog_params)
+    if @blog.save
+      redirect_to blogs_path
+    else
+      p @blog.errors.inspect
+    end 
   end
 
   def destroy
@@ -23,6 +27,6 @@ class BlogsController < ApplicationController
 
   private
     def blog_params
-      params.require(:blog).permit(:body)
+      params.require(:blog).permit(:body, :title, picture_attributes: [:image, :pictureable_type, :pictureable_id] )
     end
 end
