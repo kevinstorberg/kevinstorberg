@@ -1,0 +1,38 @@
+// Masonry CSS ================================================================
+.grid {
+   margin: 0 auto;
+}
+.grid-sizer, .grid-item {
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+.grid-item--width2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.masonry-container {
+
+}
+
+
+@media (max-width: 1250px) {
+   .grid-sizer,
+   .grid-item { width: 33%; }
+   .grid-item--width2 { width: 66%; }
+}
+
+
+@media (max-width: 1000px) {
+   .grid-sizer,
+   .grid-item { width: 50%; }
+   .grid-item--width2 { width: 100%; }
+}
+
+@media (max-width: 650px) {
+   .grid-sizer,
+   .grid-item { width: 100%; }
+   .grid-item--width2 { width: 100%; }
+}

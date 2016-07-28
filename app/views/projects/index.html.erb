@@ -3,22 +3,19 @@
      <div class="grid">
 
         <% @projects.each do |project| %>
-        <div class="grid-sizer"></div>
-        <div class="grid-item">
-
             <% unless project.picture == nil %>
-              <div class="project-image project-post">
-                <%= image_tag project.picture.image.thumb.url %>
-              </div>
+              <div class="grid-sizer"></div>
+              <div class="grid-item">
+                <div class="project-image project-post">
+                  <%= image_tag project.picture.image.thumb.url %>
+                </div>
 
-              <div class="project-body project-post">
-                <h1 class="project-title"><%= project.title %></h1>
-                <p><%= project.body %></p>
-              </div>
-
-            <% end %>
-
-        </div> <!-- Grid-Item -->
+                <div class="project-body project-post">
+                  <h1 class="project-title"><%= project.title %></h1>
+                  <p><%= project.body %></p>
+                </div>
+              </div> <!-- Grid-Item -->
+            <% end %> <!-- Unless -->
         <% end %> <!-- Projects Index -->
 
     </div> <!-- Grid -->

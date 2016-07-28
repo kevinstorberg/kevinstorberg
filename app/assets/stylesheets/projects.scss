@@ -30,11 +30,6 @@
 
 }
 
-.project-post {
-  // border: 1px solid black;
-  // border-bottom-left-radius: 5px;
-}
-
 .project-title {
   text-align: center;
   margin-left: auto;
@@ -42,44 +37,10 @@
   width: 300px;
 }
 
-
-
-// Masonry CSS ================================================================
-.grid {
-   margin: 0 auto;
-}
-.grid-sizer,
-.grid-item { width: 25%; }
-.grid-item--width2 { width: 50%; }
-
-.masonry-container {
-
-}
-
-
-@media (max-width: 1250px) {
-   .grid-sizer,
-   .grid-item { width: 33%; }
-   .grid-item--width2 { width: 66%; }
-}
-
-
-@media (max-width: 1000px) {
-   .grid-sizer,
-   .grid-item { width: 50%; }
-   .grid-item--width2 { width: 100%; }
-}
-
 @media (max-width: 650px) {
-   .grid-sizer,
-   .grid-item { width: 100%; }
-   .grid-item--width2 { width: 100%; }
-
    .project-body, .project-image, .project-title {width: 400px;}
 }
 
 @media (max-width: 450px) {
-
   .project-body, .project-image, .project-title {width: 300px;}
-
 }

@@ -1,21 +1,54 @@
 <div class="container">
+  <div class="masonry-container posts">
+    <div class="grid">
 
-  <% @blogs.each do |blog| %>
-    <% unless blog.picture == nil %>
-      <div class="row">
-        <div class= "col-xs-12">
-          <div class="media">
-            <div class="media-left">
-              <%= image_tag blog.picture.image.thumb.url, class: "media-object" %>
-            </div>
-            <div class="media-body">
-              <h1 class="media-heading"><%= blog.title %></h1>
-              <p><%= blog.body %></p>
-            </div>
-          </div> <!-- Media -->
-        </div> <!-- Columns -->
-      </div> <!-- Row -->
-    <% end %>
-  <% end %>
+        <% @blogs.reverse.each do |blog| %>
+          <% unless blog.picture == nil %>
+            <% if blog == @blogs.last %>
+              <div class="grid-sizer"></div>
+              <div class="grid-item--width2">
+                <!-- <%= link_to image_tag(blog.picture.image.thumb.url), root_url, class: "blog-image" %> -->
+                <!-- <h1 class="blog-title"><%= blog.title %></h1> -->
+                <div class="blog-image">
+                  <h1 class="blog-title"><%= blog.title %></h1>
+                  <%= image_tag blog.picture.image.large.url %>
+                </div>
+              </div><!-- Grid Item 2 -->
+            <% else %>
+              <div class="grid-sizer"></div>
+              <div class="grid-item">
+                <div class="blog-image">
+                  <h1 class="blog-title"><%= blog.title%></h1>
+                  <%= image_tag blog.picture.image.thumb.url %>
+                </div>
+              </div><!-- Grid Item -->
+            <% end %>
+          <% end %> <!-- Unless -->
+        <% end %><!-- Blogs Index -->
 
+    </div><!-- Grid -->
+  </div><!-- Masonry Container -->
 </div> <!-- Container -->
+
+
+<script>
+
+    $(document).ready(function() {
+      var $grid = $('.grid').masonry({ });
+
+        $grid.masonry({
+          // set itemSelector so .grid-sizer is not used in layout
+          itemSelector: '.grid-item',
+          // use element for option
+          columnWidth: '.grid-sizer',
+          percentPosition: true
+        });
+
+
+        $grid.imagesLoaded().progress( function() {
+          $grid.masonry('layout');
+        });
+
+    });
+
+</script>
