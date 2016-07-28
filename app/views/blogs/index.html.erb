@@ -7,19 +7,18 @@
             <% if blog == @blogs.last %>
               <div class="grid-sizer"></div>
               <div class="grid-item--width2">
-                <!-- <%= link_to image_tag(blog.picture.image.thumb.url), root_url, class: "blog-image" %> -->
-                <!-- <h1 class="blog-title"><%= blog.title %></h1> -->
                 <div class="blog-image">
-                  <h1 class="blog-title"><%= blog.title %></h1>
-                  <%= image_tag blog.picture.image.large.url %>
+                  <h1 class="blog-title"><%= link_to "#{blog.title}", root_url %></h1>
+                  <%= link_to image_tag(blog.picture.image.large.url), root_url, class: "blog-image" %>
+                  <!-- <%= image_tag blog.picture.image.large.url %> -->
                 </div>
               </div><!-- Grid Item 2 -->
             <% else %>
               <div class="grid-sizer"></div>
               <div class="grid-item">
                 <div class="blog-image">
-                  <h1 class="blog-title"><%= blog.title%></h1>
-                  <%= image_tag blog.picture.image.thumb.url %>
+                  <h1 class="blog-title"><%= link_to "#{blog.title}", root_url %></h1>
+                  <%= link_to image_tag(blog.picture.image.thumb.url), root_url, class: "blog-image" %>
                 </div>
               </div><!-- Grid Item -->
             <% end %>
