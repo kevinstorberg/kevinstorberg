@@ -1,14 +1,29 @@
 // Main CSS ===================================================================
 .project-body {
 
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+
 }
 
 .project-image {
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+
+  img {
+    width: 100%;
+  }
 
 }
 
 .project-title {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
 }
 
 
@@ -33,14 +48,22 @@
 }
 
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
    .grid-sizer,
    .grid-item { width: 50%; }
    .grid-item--width2 { width: 100%; }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 650px) {
    .grid-sizer,
    .grid-item { width: 100%; }
    .grid-item--width2 { width: 100%; }
+
+   .project-body, .project-image, .project-title {width: 400px;}
+}
+
+@media (max-width: 450px) {
+
+  .project-body, .project-image, .project-title {width: 300px;}
+
 }
