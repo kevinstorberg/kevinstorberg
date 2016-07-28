@@ -1,22 +1,38 @@
 // Main CSS ===================================================================
 .project-body {
-
+  border: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 300px;
 
+  p {
+    padding: 15px;
+  }
+
 }
 
 .project-image {
-
+  border: 1px solid black;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
   width: 300px;
 
   img {
     width: 100%;
   }
 
+}
+
+.project-post {
+  // border: 1px solid black;
+  // border-bottom-left-radius: 5px;
 }
 
 .project-title {
