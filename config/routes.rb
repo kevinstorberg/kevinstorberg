@@ -20,6 +20,10 @@ Rails.application.routes.draw do
     get 'contact', to: 'pages#contact', as: 'contact'
 
 
+    # Pictures ================================================================
+    resources :pictures
+    
+
     # Projects ===================================================================
     resources :projects
     # get 'projects', to: 'projects#index', as: 'projects'
@@ -35,6 +39,7 @@ Rails.application.routes.draw do
     # Welcome ===================================================================
     get 'welcome/index'
     root 'welcome#index'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

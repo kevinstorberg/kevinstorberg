@@ -10,11 +10,11 @@ class PicturesController < ApplicationController
 
   def destroy
     @picture.destroy
-    redirect_to root_url 
+    redirect_to root_url
   end
 
   private
     def picture_params
-      params.require(:picture).permit(:pictureable)
+      params.require(:picture).permit(:pictureable, :image)
     end
 end

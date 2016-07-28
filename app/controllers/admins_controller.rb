@@ -1,6 +1,8 @@
 class AdminsController < ApplicationController
 
   def show
+    @project = Project.new
+    @project.build_picture
   end
 
   def create
