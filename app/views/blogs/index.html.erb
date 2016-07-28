@@ -1,3 +1,11 @@
-<% @blogs.each do |blog| %>
-  <%= blog.body %>
-<% end %>
+<div class="container">
+
+  <% @blogs.each do |blog| %>
+    <%= blog.title %>
+    <%= blog.body %>
+    <% unless blog.picture == nil %>
+      <%= image_tag blog.picture.image.thumb.url %>
+    <% end %>
+  <% end %>
+
+</div> <!-- Container -->

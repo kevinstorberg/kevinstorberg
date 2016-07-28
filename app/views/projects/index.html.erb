@@ -1,3 +1,53 @@
-<% @projects.each do |project| %>
-  <%= project.body %>
-<% end %>
+<div class="container">
+  <div class="masonry-container posts">
+     <div class="grid">
+
+        <% @projects.each do |project| %>
+        <div class="grid-sizer"></div>
+        <div class="grid-item">
+
+            <% unless project.picture == nil %>
+
+              <div class="project-title">
+                <h1><%= project.title %></h1>
+              </div>
+
+              <div class="project-image">
+                <%= image_tag project.picture.image.thumb.url %>
+              </div>
+
+              <div class="project-body">
+                <p><%= project.body %></p>
+              </div>
+              
+            <% end %>
+
+        </div> <!-- Grid-Item -->
+        <% end %> <!-- Projects Index -->
+
+    </div> <!-- Grid -->
+  </div> <!-- Masonry Container -->
+</div> <!-- Container -->
+
+
+<script>
+
+    $(document).ready(function {
+      var $grid = $('.grid').masonry({ });
+
+        $grid.masonry({
+          // set itemSelector so .grid-sizer is not used in layout
+          itemSelector: '.grid-item',
+          // use element for option
+          columnWidth: '.grid-sizer',
+          percentPosition: true
+        });
+
+
+        $grid.imagesLoaded().progress( function() {
+          $grid.masonry('layout');
+        });
+
+    });
+
+</script>
