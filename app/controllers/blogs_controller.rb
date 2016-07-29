@@ -3,6 +3,10 @@ class BlogsController < ApplicationController
     @blogs = Blog.all
   end
 
+  def show
+    @blog = Blog.find(params[:id])
+  end
+
   def new
     @blog = Blog.new
   end
@@ -17,7 +21,7 @@ class BlogsController < ApplicationController
       redirect_to blogs_path
     else
       p @blog.errors.inspect
-    end 
+    end
   end
 
   def destroy

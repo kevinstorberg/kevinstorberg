@@ -8,18 +8,23 @@
               <div class="grid-sizer"></div>
               <div class="grid-item--width2">
                 <div class="blog-image">
-                  <h1 class="blog-title"><%= link_to "#{blog.title}", root_url %></h1>
-                  <%= link_to image_tag(blog.picture.image.large.url), root_url, class: "blog-image" %>
-                  <!-- <%= image_tag blog.picture.image.large.url %> -->
-                </div>
+                  <%= image_tag blog.picture.image.large.url %>
+                  </div>
+                  <div class="blog-body blog-post">
+                    <h1 class="blog-title"><%= blog.title %></h1>
+                    <p><%= blog.body %></p>
+                  </div>
               </div><!-- Grid Item 2 -->
             <% else %>
               <div class="grid-sizer"></div>
               <div class="grid-item">
                 <div class="blog-image">
-                  <h1 class="blog-title"><%= link_to "#{blog.title}", root_url %></h1>
-                  <%= link_to image_tag(blog.picture.image.thumb.url), root_url, class: "blog-image" %>
-                </div>
+                  <%= image_tag blog.picture.image.thumb.url, class: "blog-image" %>
+                  </div>
+                  <div class="blog-body blog-post">
+                    <h1 class="blog-title"><%= blog.title %></h1>
+                    <p><%= blog.body %></p>
+                  </div>
               </div><!-- Grid Item -->
             <% end %>
           <% end %> <!-- Unless -->
