@@ -3,6 +3,8 @@
   border: 1px solid black;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 20px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -32,9 +34,11 @@
 
 .project-title {
   text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
   margin-left: auto;
   margin-right: auto;
-  // position: absolute;
   width: 300px;
 
   a {
