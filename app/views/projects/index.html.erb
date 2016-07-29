@@ -2,17 +2,16 @@
   <div class="masonry-container posts">
      <div class="grid">
 
-        <% @projects.each do |project| %>
+        <% @projects.reverse.each do |project| %>
             <% unless project.picture == nil %>
               <div class="grid-sizer"></div>
               <div class="grid-item">
                 <div class="project-image project-post">
-                  <!-- <h1 class="project-title"><%= link_to "#{project.title}", "http://#{project.title}", remote: true, target: "_blank" %></h1> -->
-                  <%= link_to image_tag(project.picture.image.thumb.url), "http://#{project.title}", remote: true, target: "_blank" %>
+                  <%= link_to image_tag(project.picture.image.thumb.url), "http://#{project.title}", target: "_blank" %>
                 </div>
 
                 <div class="project-body project-post">
-                  <h1 class="project-title"><%= link_to "#{project.title}", "http://#{project.title}", remote: true, target: "_blank" %></h1>
+                  <h1 class="project-title"><%= link_to "#{project.title}", "http://#{project.title}", target: "_blank" %></h1>
                   <p><%= project.body %></p>
                 </div>
               </div> <!-- Grid-Item -->
