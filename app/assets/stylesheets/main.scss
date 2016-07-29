@@ -12,6 +12,32 @@
   -webkit-box-align: center;
 }
 
+.navbar {
+  background-color: white;
+  border: none;
+}
+
+.navbar-nav li a {
+  padding-bottom: 4px;
+  text-align: center;
+}
+
+.active-navbar-link {
+  border-bottom: 2px solid gray;
+  font-size: 17px;
+}
+
+.navbar-brand {
+  margin-left: 10%;
+}
+
 #navbar-welcome {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .active-navbar-link {
+    border-bottom: none;
+    font-size: 17px;
+  }
 }
