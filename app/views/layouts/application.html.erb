@@ -36,12 +36,20 @@
 
         <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <% if controller.controller_name == "pages" && controller.action_name == "about" %>
-                   <li><a href="<%= root_url %>">Home<span class="sr-only">(current)</span></a></li>
-                   <li class="active-navbar-link"> <%= link_to 'About', 'about' %> </li>
-                   <li> <%= link_to 'Projects', 'projects' %> </li>
-                   <li> <%= link_to 'Blog', 'blogs' %> </li>
-                   <li> <%= link_to 'Contact', 'contact' %> </li>
+                <% if controller.controller_name == "pages" %>
+                  <% if controller.action_name == "about" %>
+                     <li><a href="<%= root_url %>">Home<span class="sr-only">(current)</span></a></li>
+                     <li class="active-navbar-link"> <%= link_to 'About', 'about' %> </li>
+                     <li> <%= link_to 'Projects', 'projects' %> </li>
+                     <li> <%= link_to 'Blog', 'blogs' %> </li>
+                     <li> <%= link_to 'Contact', 'contact' %> </li>
+                  <% elsif controller.action_name == "contact" %>
+                    <li><a href="<%= root_url %>">Home<span class="sr-only">(current)</span></a></li>
+                    <li> <%= link_to 'About', 'about' %> </li>
+                    <li> <%= link_to 'Projects', 'projects' %> </li>
+                    <li> <%= link_to 'Blog', 'blogs' %> </li>
+                    <li class="active-navbar-link"> <%= link_to 'Contact', 'contact' %> </li>
+                  <% end %>
                <% elsif controller.controller_name == "projects" && controller.action_name == "index" %>
                    <li><a href="<%= root_url %>">Home<span class="sr-only">(current)</span></a></li>
                    <li> <%= link_to 'About', 'about' %> </li>
@@ -54,12 +62,14 @@
                    <li> <%= link_to 'Projects', 'projects' %> </li>
                    <li class="active-navbar-link"> <%= link_to 'Blog', 'blogs' %> </li>
                    <li> <%= link_to 'Contact', 'contact' %> </li>
-               <% elsif controller.controller_name == "pages" && controller.action_name == "contact" %>
+               <% elsif controller.controller_name == "admins" && controller.action_name == "show" %>
                    <li><a href="<%= root_url %>">Home<span class="sr-only">(current)</span></a></li>
                    <li> <%= link_to 'About', 'about' %> </li>
                    <li> <%= link_to 'Projects', 'projects' %> </li>
                    <li> <%= link_to 'Blog', 'blogs' %> </li>
-                   <li class="active-navbar-link"> <%= link_to 'Contact', 'contact' %> </li>
+                   <li> <%= link_to 'Contact', 'contact' %> </li>
+                   <li> <%= link_to "Log Out", logout_path %></li>
+                   <li> <%= link_to "Log In", login_path %></li>
                 <% end %>
              </ul>
         </div>
