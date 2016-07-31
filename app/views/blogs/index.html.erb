@@ -13,6 +13,7 @@
                   <div class="blog-body blog-post">
                     <h1 class="blog-title"><%= blog.title %></h1>
                     <p><%= blog.body %></p>
+                    <p>Posted on: <%= blog.created_at.strftime("%m-%d-%Y") %></p>
                   </div>
               </div><!-- Grid Item 2 -->
             <% else %>
@@ -24,6 +25,7 @@
                   <div class="blog-body blog-post">
                     <h1 class="blog-title"><%= blog.title %></h1>
                     <p><%= blog.body %></p>
+                    <p>Posted on: <%= blog.created_at.strftime("%m-%d-%Y") %></p>
                   </div>
               </div><!-- Grid Item -->
             <% end %>
