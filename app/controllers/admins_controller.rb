@@ -8,10 +8,6 @@ class AdminsController < ApplicationController
     @blog.build_picture
   end
 
-  def new
-    @admin = Admin.new
-  end 
-
   def create
     @admin = Admin.new(admin_params)
     if @admin.save

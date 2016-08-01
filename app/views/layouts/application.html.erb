@@ -64,13 +64,9 @@
                    <li> <%= link_to 'Contact', 'contact' %> </li>
                <% elsif controller.controller_name == "admins" && controller.action_name == "show" %>
                    <li><a href="<%= root_url %>">Home<span class="sr-only">(current)</span></a></li>
-                   <li> <%= link_to 'About', 'about' %> </li>
-                   <li> <%= link_to 'Projects', 'projects' %> </li>
-                   <li> <%= link_to 'Blog', 'blogs' %> </li>
-                   <li> <%= link_to 'Contact', 'contact' %> </li>
-                   <% if session.id != nil %>
+                   <% if current_admin == kevin %>
                        <li> <%= link_to "Log Out", logout_path %></li>
-                   <% elsif session.id == nil %>
+                   <% else %>
                        <li> <%= link_to "Log In", login_path %></li>
                    <% end %>
                 <% end %>

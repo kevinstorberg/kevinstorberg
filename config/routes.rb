@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'pictures/new'
-
-  get 'pictures/create'
-
-  get 'pictures/destroy'
-
     # Admin ===================================================================
     resources :admins
 
@@ -22,11 +16,10 @@ Rails.application.routes.draw do
 
     # Pictures ================================================================
     resources :pictures
-    
+
 
     # Projects ===================================================================
     resources :projects
-    # get 'projects', to: 'projects#index', as: 'projects'
 
 
     # Sessions ===================================================================
